@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Index</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        html, body {
+            height: 100%; /* Ensure HTML and body take up full height */
+            margin: 0; /* Remove default margin */
+        }
+        body {
+            background-image: url('background.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent tiling of the image */
+            color: white; /* Change text color to white for better contrast */
+            font-family: Arial, sans-serif; /* Set a nice font */
+        }
+        header {
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Center items vertically */
+            padding: 10px 20px; /* Padding around the header */
+            background-color: rgba(0, 0, 139, 0.8); /* Semi-transparent dark blue header */
+        }
+        h1 {
+            margin: 20px; /* Margin for the main heading */
+        }
+        nav a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline from links */
+            margin-left: 20px; /* Space between links */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center buttons horizontally */
+            align-items: center; /* Center buttons vertically */
+            height: calc(100% - 80px); /* Adjust height to center below the header */
+            flex-direction: column; /* Stack buttons vertically */
+        }
+        .button {
+            background-color: rgba(0, 102, 204, 0.8); /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            padding: 20px 40px; /* Padding for buttons */
+            font-size: 24px; /* Font size for buttons */
+            margin: 20px; /* Margin between buttons */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth background color change */
+        }
+        .button:hover {
+            background-color: rgba(0, 153, 255, 0.8); /* Change color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>MENU</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="meal_planner.html">Meal Planner</a>
+            <a href="suggest.html">Meal finder</a>
+        </nav>
+    </header>
+
+    <div class="button-container">
+        <a href="meal_planner.html" class="button">Meal Planner</a>
+        <a href="suggest.html" class="button">Meal finder</a>
+        <a href="grocery.html" class="button">Grocery list</a>
+    </div>
+</body>
+</html>

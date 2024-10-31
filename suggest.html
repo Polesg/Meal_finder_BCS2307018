@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder</title>
+    <style>
+        html, body {
+            min-height: 100%;
+            margin: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black; /* Change text color to black */
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 139, 0.8);
+        }
+        h1, h2 {
+            margin: 20px;
+            color: white; /* Keep header text white */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        select, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: blue;
+        }
+        h1,h2{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MENU</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="meal_planner.html">Meal Planner</a>
+            <a href="suggest.html">Meal finder</a>
+        </nav>
+    </header>
+
+    <h1>Meal Finder</h1>
+    <label for="category">Select Category:</label>
+    <select id="category"></select>
+    
+    <label for="ingredients">Select Ingredient:</label>
+    <select id="ingredients"></select>
+
+    <button onclick="buttonClicked()">Search Meals</button>
+    
+    <h2>Suggestions</h2>
+    <div id="suggestion"></div>
+
+    <script src="suggest.js"></script>
+</body>
+</html>

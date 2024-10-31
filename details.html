@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Details</title>
+    <style>
+        /* Background and layout */
+        html, body {
+            min-height: 100%;
+            margin: 0;
+            background-image: url('background.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 139, 0.8);
+            z-index: 10; /* Keep header on top */
+        }
+
+        h1 {
+            margin: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container for meal details */
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 100px; /* Space to avoid clashing with the header */
+            color: #333;
+        }
+
+        .meal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .meal-header img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .meal-details h1 {
+            margin: 0;
+        }
+
+        .meal-info p {
+            color: #666;
+        }
+
+        .meal-instructions h3, .meal-ingredients h3 {
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .meal-ingredients ul, .meal-instructions ol {
+            padding-left: 20px;
+        }
+
+        .meal-instructions li, .meal-ingredients li {
+            margin-bottom: 10px;
+        }
+
+        /* Save Button Style */
+        .save-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .save-button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MENU</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="meal_planner.html">Meal Planner</a>
+            <a href="suggest.html">Suggestions</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="meal-details">
+            <!-- Meal details will load here dynamically -->
+        </div>
+    </div>
+
+    <script src="details.js"></script>
+</body>
+</html>

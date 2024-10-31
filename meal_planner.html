@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <style>
+        /* Background and layout */
+        html, body {
+            min-height: 100%;
+            margin: 0;
+            background-image: url('background.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 139, 0.8);
+            z-index: 10; /* Keep header on top */
+        }
+
+        h1 {
+            margin: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container for meal planner */
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 100px; /* Space to avoid clashing with the header */
+            color: #333;
+        }
+
+        /* Meal item styles */
+        .meal-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: rgba(240, 240, 240, 0.5);
+        }
+
+        .meal-item h3 {
+            margin: 0;
+        }
+
+        img {
+            width: 100px; /* Set a fixed width for images */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between image and text */
+        }
+
+        .remove-button {
+            background-color: darkred;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .remove-button:hover {
+            background-color: red;
+        }
+
+        /* Button to go to grocery page */
+        .grocery-button {
+            display: block; /* Make the button block level */
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 20px; /* Space above the button */
+            cursor: pointer;
+            text-align: center; /* Center text */
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .grocery-button:hover {
+            background-color: green; /* Lighter green on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meal Planner</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="suggest.html">Meal finder</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Your Saved Meals</h2>
+        <div id="meal-list">
+            <!-- Saved meals will be populated here -->
+        </div>
+        
+        <!-- Button to go to grocery.html -->
+        <a href="grocery.html" class="grocery-button">Go to Grocery List</a>
+    </div>
+
+    <script src="meal_planner.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        html, body {
+            min-height: 100%; /* Ensure HTML and body take up full height */
+            margin: 0; /* Remove default margin */
+            background-image: url('background.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent tiling of the image */
+            color: white; /* Change text color to white for better contrast */
+            font-family: Arial, sans-serif; /* Set a nice font */
+        }
+        header {
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Center items vertically */
+            padding: 10px 20px; /* Padding around the header */
+            background-color: rgba(0, 0, 139, 0.8); /* Semi-transparent dark blue header */
+        }
+        h1 {
+            margin: 20px; /* Margin for the main heading */
+        }
+        nav a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underline from links */
+            margin-left: 20px; /* Space between links */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .content {
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center content */
+            justify-content: center; /* Center content */
+            height: calc(100% - 80px); /* Adjust height to center below the header */
+            padding: 20px; /* Padding around content */
+        }
+        .grocery-box {
+            background-color: rgba(224, 224, 224, 0.9); /* Grey background for grocery list */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Padding inside the box */
+            width: 100%; /* Width of the box */
+            max-width: 600px; /* Max width for larger screens */
+            max-height: 600px; /* Limit the height to create a scrollable area */
+            overflow-y: auto; /* Enable vertical scroll if content overflows */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            text-align: left; /* Align text to the left */
+            color: black;
+        }
+        ul {
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+        }
+        li {
+            display: flex; /* Flex layout for items */
+            justify-content: space-between; /* Space between text and remove 'X' */
+            padding: 8px; /* Padding for list items */
+            border-bottom: 1px solid #ccc; /* Divider between items */
+        }
+        .remove-item {
+            cursor: pointer; /* Pointer cursor for clickable items */
+            color: red; /* Red color for the remove 'X' */
+        }
+        #remove-all-button {
+            margin-top: 20px; /* Space above the remove all button */
+            padding: 10px; /* Padding for the button */
+            background-color: darkred; /* Button background color */
+            color: white; /* Text color for the button */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners for the button */
+            cursor: pointer; /* Pointer cursor for the button */
+        }
+        #remove-all-button:hover {
+            background-color: red; /* Change background on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grocery List</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="meal_planner.html">Meal Planner</a>
+            <a href="suggest.html">Meal finder</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="grocery-box">
+            <h2>Your Grocery Items</h2>
+            <div id="grocery-list"></div> <!-- Container for grocery items -->
+            <button id="remove-all-button">Remove All Items</button> <!-- Button to remove all items from the grocery list -->
+        </div>
+    </div>
+    <script src="grocery.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
